@@ -1,0 +1,27 @@
+{
+  "name": "light-wechat",
+  "version": "0.0.1",
+  "description": "LightWechat ===========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LightCircle/LightWechat.git"
+  },
+  "keywords": [
+    "wechat"
+  ],
+  "author": "r2space",
+  "license": "MTL",
+  "bugs": {
+    "url": "https://github.com/LightCircle/LightBridge/issues"
+  },
+  "homepage": "https://github.com/LightCircle/LightWechat",
+  "dependencies": {
+    "light-core": "0.0.1",
+    "formstream": "1.0.0",
+    "urllib": "2.2.2"
+  }
+}
