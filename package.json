@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/LightCircle/LightWechat",
   "dependencies": {
-    "light-core": "0.0.1",
+    "light-core": "git+http://git.alphabets.cn/root/LightCore.git",
     "formstream": "1.0.0",
     "urllib": "2.2.2"
   }
