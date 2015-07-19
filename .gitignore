@@ -1,0 +1,14 @@
+# node模块
+node_modules/
+
+# 上传等临时文件
+tmp/
+
+# mac用管理文件
+.DS_Store
+
+# WebStorm管理文件
+.idea
+
+# npm安装日志
+npm-debug.log
