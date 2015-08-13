@@ -7,3 +7,4 @@
 
 exports.api = require("./api");
 exports.callback = require("./callback");
+exports.mp = require("./lib/mp");
