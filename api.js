@@ -8,8 +8,7 @@
 
 "use strict";
 
-var light       = require("light-core")
-  , fs          = require("fs")
+var fs          = require("fs")
   , path        = require("path")
   , util        = require("util")
   , formstream  = require("formstream")

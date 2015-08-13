@@ -8,8 +8,7 @@
 
 "use strict";
 
-var light       = require("light-core")
-  , url         = require("url")
+var url         = require("url")
   , xml2js      = light.util.xml2js
   , config      = light.framework.config
   , helper      = light.framework.helper
