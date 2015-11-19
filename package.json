@@ -23,7 +23,7 @@
     "light-core": "git+http://git.alphabets.cn/root/LightCore.git",
     "formstream": "1.0.0",
     "urllib": "2.2.2",
-    "wechat": "2.0.1",
-    "wechat-api": "1.9.4"
+    "wechat": "2.0.2",
+    "wechat-api": "1.20.0"
   }
 }
