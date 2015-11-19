@@ -5,7 +5,7 @@
 
 "use strict";
 
-exports.api = require("./api");
-exports.callback = require("./callback");
 exports.mp = require("./lib/mp");
-exports.enterpris = require("./lib/enterpris");
+exports.mpAPI = require("./lib/mp_api");
+exports.enterprise = require("./lib/enterprise");
+exports.enterpriseAPI = require("./lib/enterprise_api");
