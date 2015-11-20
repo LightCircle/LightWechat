@@ -13,17 +13,17 @@ var log       = light.framework.log
   , cache     = light.framework.cache
   , context   = light.framework.context
   , rider     = light.model.rider
-  , constant  = require("./constant")
   , mp        = require("./lib/mp")
+  , eapi      = require("./lib/enterprise_api")
   ;
 
-process.env.LIGHTDB_USER = "admin";
-process.env.LIGHTDB_PASS = "ShotEyes";
+process.env.LIGHTDB_USER = "r2space";
+process.env.LIGHTDB_PASS = "ranbow";
 process.env.LIGHTDB_PORT = "57017";
-process.env.APPNAME      = "628f1c81af5c";
-process.env.DEV          = true;
+process.env.APPNAME = "401a86a8af87";
+process.env.DEV = true;
 
-cache.manager.init(process.env.APPNAME, function(err) {
+cache.manager.init(process.env.APPNAME, function (err) {
   if (err) {
     log.error(err);
     return process.exit(1);  // 初始化出错，拒绝启动
@@ -32,18 +32,7 @@ cache.manager.init(process.env.APPNAME, function(err) {
   // 初始化rider
   rider.init();
 
-  //mp.sendTemplate({
-  //  appid: "wx995ebbd601a092d7",
-  //  secret: "e158c151364df166990eec07d4ed0a6a",
-  //  openid: ""
-  //}, function (err, result) {
-  //  console.log(err, result);
-  //});
-
-  mp.getUserList({
-    appid: "wxa1845c58a74d8579",
-    secret: "8f099156c54adee1048875f890003de5"
-  }, function (err, result) {
+  eapi.sendText({touser: "r2space", text: {content: "测试 企业号 发送消息"}}, function (err, result) {
     console.log(err, result);
   });
 
