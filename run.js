@@ -177,4 +177,13 @@ cache.manager.init(process.env.APPNAME, function (err) {
   //  console.log(err, result);
   //});
 
+
+  api.createTmpQRCode(10000, 60, function (err, result) {
+
+    console.log(result);
+
+    var url = api.showQRCodeURL(result.ticket);
+    console.log(url);
+  });
+
 });
