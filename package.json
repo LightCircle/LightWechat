@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/LightCircle/LightWechat",
   "dependencies": {
-    "light-core": "0.1.4",
+    "light-core": "0.3.4",
     "wechat-api": "1.24.0",
     "wechat-enterprise-api": "0.3.0"
   }
