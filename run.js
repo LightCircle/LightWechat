@@ -16,10 +16,11 @@ var log       = light.framework.log
   , request   = light.util.request
   , async     = light.util.async;
 
-process.env.LIGHTDB_USER = "r2space";
-process.env.LIGHTDB_PASS = "ranbow";
+process.env.LIGHTDB_USER = "light";
+process.env.LIGHTDB_PASS = "2e35501c2b7e";
+process.env.LIGHTDB_HOST = "db.alphabets.cn";
 process.env.LIGHTDB_PORT = "57017";
-process.env.APPNAME = "56648deee144";
+process.env.APPNAME = "LightDB";
 process.env.DEV = true;
 
 cache.manager.init(process.env.APPNAME, function (err) {
@@ -31,8 +32,15 @@ cache.manager.init(process.env.APPNAME, function (err) {
   // 初始化rider
   rider.init();
 
-  var eapi = require("./lib/enterprise_api")
-    , mapi = require("./lib/mp_api");
+  var eapi = require("./lib/enterprise/enterprise_api")
+    , mapi = require("./lib/mp/mp_api")
+    , xapi = require("./lib/xcx/api");
+
+
+  xapi.jscode2session({code: '011C4Gak1e2bki0PDl7k1WCEak1C4GaQ'}, function (err, res) {
+
+    console.log(err, res);
+  });
 
   // 测试公众号的主动调用api
   //new mapi().getJsConfig({
@@ -69,7 +77,7 @@ cache.manager.init(process.env.APPNAME, function (err) {
 
 
   // 创建基础菜单
-  var api = new mapi();
+  // var api = new mapi();
   //api.createMenu({
   //  "button": [
   //    {
@@ -177,13 +185,12 @@ cache.manager.init(process.env.APPNAME, function (err) {
   //  console.log(err, result);
   //});
 
-
-  api.createTmpQRCode(10000, 60, function (err, result) {
-
-    console.log(result);
-
-    var url = api.showQRCodeURL(result.ticket);
-    console.log(url);
-  });
+  // api.createTmpQRCode(10000, 60, function (err, result) {
+  //
+  //   console.log(result);
+  //
+  //   var url = api.showQRCodeURL(result.ticket);
+  //   console.log(url);
+  // });
 
 });
