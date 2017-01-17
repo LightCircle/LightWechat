@@ -16,11 +16,11 @@ var log       = light.framework.log
   , request   = light.util.request
   , async     = light.util.async;
 
-process.env.LIGHTDB_USER = "light";
-process.env.LIGHTDB_PASS = "2e35501c2b7e";
+process.env.LIGHTDB_USER = "test";
+process.env.LIGHTDB_PASS = "test";
 process.env.LIGHTDB_HOST = "db.alphabets.cn";
 process.env.LIGHTDB_PORT = "57017";
-process.env.APPNAME = "LightDB";
+process.env.APPNAME = "db";
 process.env.DEV = true;
 
 cache.manager.init(process.env.APPNAME, function (err) {
