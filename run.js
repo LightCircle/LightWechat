@@ -32,13 +32,16 @@ cache.manager.init(process.env.APPNAME, function (err) {
   // 初始化rider
   rider.init();
 
-  var eapi = require("./lib/enterprise/enterprise_api")
+  var eapi = require("./lib/ep/enterprise_api")
     , mapi = require("./lib/mp/mp_api")
     , xapi = require("./lib/xcx/api");
 
+  // 小程序 code 换取 openid
+  // xapi.jscode2session({code: '031pw5en0tOQko16F6dn0lEben0pw5es'}, function (err, res) {
+  //   console.log(err, res);
+  // });
 
-  xapi.jscode2session({code: '011C4Gak1e2bki0PDl7k1WCEak1C4GaQ'}, function (err, res) {
-
+  xapi.qrcode({path: "pages/profile/profile"}, function (err, res) {
     console.log(err, res);
   });
 
